@@ -35,7 +35,7 @@ const askAI=async(req,res)=>{
             },
             body:JSON.stringify({
                 model:"llama-3.1-8b-instant",
-                message:[{role:"user", content:prompt}]
+                messages:[{role:"user", content:prompt}]
             })
         })
 
