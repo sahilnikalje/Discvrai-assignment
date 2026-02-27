@@ -19,7 +19,13 @@ function Searchbar({query, onChange, onSubmit, onReset, isAskMode, loading}) {
                 {loading ? 'thinking...' : "Ask AI"}
             </button>
         </div>
-
+           
+           {loading && (
+              <p className="cold-message">
+               🚀 Server is waking up (free-tier hosting may cause a short delay on first request).
+             </p>
+           )} 
+           
         {isAskMode && (
             <button className='reset-btn' type='button' onClick={onReset}>
                 Show all Products
